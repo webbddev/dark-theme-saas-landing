@@ -1,7 +1,8 @@
+'use client';
 import Image from 'next/image';
-import ArrowWWIcon from '../assets/icons/arrow-w.svg';
 import cursorImage from '../assets/images/cursor.png';
 import messageImage from '../assets/images/message.png';
+import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
@@ -13,24 +14,36 @@ export const Hero = () => {
             <h1 className='capitalize text-7xl sm:text-9xl font-bold tracking-tighter text-center inline-flex'>
               one shot <br /> at a time
             </h1>
-            <div className='absolute right-[532px] top-[108px] hidden sm:inline'>
+            <motion.div
+              className='absolute right-[532px] top-[108px] hidden sm:inline'
+              drag
+              // dragSnapToOrigin
+              dragMomentum={false} // drag and leave
+            >
               <Image
                 src={cursorImage}
                 alt='cursor'
                 height={200}
                 width={200}
                 className='max-w-none'
+                draggable={false}
               />
-            </div>
-            <div className='absolute left-[540px] top-[56px] hidden sm:inline'>
+            </motion.div>
+            <motion.div
+              className='absolute left-[540px] top-[56px] hidden sm:inline'
+              drag
+              dragSnapToOrigin
+            >
               <Image
                 src={messageImage}
                 alt='message'
                 height={200}
                 width={200}
                 className='max-w-none'
+                draggable={false}
+
               />
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className='flex justify-center'>
