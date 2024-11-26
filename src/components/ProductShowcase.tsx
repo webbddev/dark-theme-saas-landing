@@ -11,8 +11,8 @@ export const ProductShowcase = () => {
           <p className='text-center mt-5 text-xl text-white/70'>
             Our team of skilled professionals specializes in crafting stunning
             visuals that tell your story. From corporate videos to captivating
-            photoshoots, we'll bring your ideas to life. Let us help you make a
-            lasting impression.
+            photoshoots, we&apos;ll bring your ideas to life. Let us help you
+            make a lasting impression.
           </p>
         </div>
         <Image
