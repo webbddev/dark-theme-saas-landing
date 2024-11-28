@@ -1,8 +1,4 @@
-import InstaIcon from '../assets/icons/insta.svg';
-import XSocial from '../assets/icons/x-social.svg';
-import TiktokIcon from '../assets/icons/tiktok.svg';
-import YoutubeIcon from '../assets/icons/youtube.svg';
-
+import { FaInstagram, FaTwitter, FaTiktok, FaYoutube } from 'react-icons/fa';
 export const Footer = () => {
   const getCurrentYear = () => new Date().getFullYear();
 
@@ -17,16 +13,17 @@ export const Footer = () => {
           </div>
           <ul className='flex justify-center gap-2.5'>
             <li>
-              <XSocial />
+              <FaTwitter className="h-5 w-5 text-white/60 hover:text-white/90" />
             </li>
             <li>
-              <InstaIcon />
+              <FaInstagram className="h-5 w-5 text-white/60 hover:text-white/90" />
             </li>
             <li>
-              <TiktokIcon />
+              <FaTiktok className="h-5 w-5 text-white/60 hover:text-white/90" />
             </li>
             <li>
-              <YoutubeIcon />
+
+              <FaYoutube className="h-5 w-5 text-white/60 hover:text-white/90" />
             </li>
           </ul>
         </div>

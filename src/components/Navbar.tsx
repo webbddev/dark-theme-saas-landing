@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import logoImage from '../assets/images/logosaas.png';
-import MenuIcon from '../assets/icons/menu.svg';
+import { HiMenu } from 'react-icons/hi';
 
 export const Navbar = () => {
   return (
@@ -12,11 +12,13 @@ export const Navbar = () => {
             <Image
               src={logoImage}
               alt='Saas logo'
-              className='h-12 w-12 relative'
+              width={48}
+              height={48}
+              className='relative'
             />
           </div>
           <div className='border border-white border-opacity-30 h-10 w-10 inline-flex justify-center items-center rounded-lg sm:hidden'>
-            <MenuIcon className='text-white' />
+            <HiMenu className='text-white h-6 w-6' />
           </div>
           <nav className='gap-6 items-center hidden sm:flex'>
             <a

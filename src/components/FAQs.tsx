@@ -1,9 +1,8 @@
 'use client';
 import { useState } from 'react';
-import PlusIcon from '../assets/icons/plus.svg';
-import MinusIcon from '../assets/icons/minus.svg';
 
 import clsx from 'clsx';
+import { FiMinus, FiPlus } from 'react-icons/fi';
 
 const items = [
   {
@@ -45,12 +44,11 @@ const AccordionItem = ({
       <div className='flex items-center justify-between '>
         <span className='flex-1 text-lg font-bold'>{question}</span>
         {isOpen ? (
-          <MinusIcon className='h-6 w-6 text-white/50' />
+          <FiMinus className='h-6 w-6 text-white/90' />
         ) : (
-          <PlusIcon className='h-6 w-6 text-white/50' />
+          <FiPlus className='h-6 w-6 text-white/90' />
         )}
       </div>
-      {/* Toggles visibility of answer content based on isOpen state */}
       <div className={clsx('mt-4', { hidden: !isOpen, '': isOpen === true })}>
         {answer}
       </div>
