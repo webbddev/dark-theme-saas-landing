@@ -7,7 +7,7 @@ const nextConfig = {
     );
 
     config.module.rules.push(
-      // Reapply the existing rule, but only for svg imports ending in ?url 
+      // Reapply the existing rule, but only for svg imports ending in ?url
       {
         ...fileLoaderRule,
         test: /\.svg$/i,
@@ -27,6 +27,8 @@ const nextConfig = {
 
     return config;
   },
+
+  // ...other config
 };
 
 export default nextConfig;
