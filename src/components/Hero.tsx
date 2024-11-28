@@ -41,7 +41,6 @@ export const Hero = () => {
                 width={200}
                 className='max-w-none'
                 draggable={false}
-
               />
             </motion.div>
           </div>
