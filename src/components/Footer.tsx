@@ -1,4 +1,6 @@
 import { FaInstagram, FaTwitter, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { RiTwitterXLine } from "react-icons/ri";
+
 export const Footer = () => {
   const getCurrentYear = () => new Date().getFullYear();
 
@@ -13,17 +15,16 @@ export const Footer = () => {
           </div>
           <ul className='flex justify-center gap-2.5'>
             <li>
-              <FaTwitter className="h-5 w-5 text-white/60 hover:text-white/90" />
+              <RiTwitterXLine className='h-5 w-5 text-white/60 hover:text-white/90' />
             </li>
             <li>
-              <FaInstagram className="h-5 w-5 text-white/60 hover:text-white/90" />
+              <FaInstagram className='h-5 w-5 text-white/60 hover:text-white/90' />
             </li>
             <li>
-              <FaTiktok className="h-5 w-5 text-white/60 hover:text-white/90" />
+              <FaTiktok className='h-5 w-5 text-white/60 hover:text-white/90' />
             </li>
             <li>
-
-              <FaYoutube className="h-5 w-5 text-white/60 hover:text-white/90" />
+              <FaYoutube className='h-5 w-5 text-white/60 hover:text-white/90' />
             </li>
           </ul>
         </div>
