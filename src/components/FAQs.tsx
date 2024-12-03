@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import clsx from 'clsx';
 import { FiMinus, FiPlus } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const items = [
   {
@@ -49,9 +50,30 @@ const AccordionItem = ({
           <FiPlus className='h-6 w-6 text-white/90' />
         )}
       </div>
-      <div className={clsx('mt-4', { hidden: !isOpen, '': isOpen === true })}>
-        {answer}
-      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+            }}
+            animate={{
+              opacity: 1,
+              height: 'auto',
+              marginTop: '16px',
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+            }}
+          >
+            {answer}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
